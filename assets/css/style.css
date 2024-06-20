@@ -59,6 +59,12 @@ nav {
   flex-wrap: wrap;
 }
 
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
 nav a {
   text-decoration: none;
   padding: 5px 10px;
@@ -70,6 +76,11 @@ nav a {
   background-position: bottom;
   transition: all 0.25s ease-in;
   font-size: 1.4rem;
+  
+}
+
+ul {
+  list-style: none;
 }
 
 nav a:hover {
@@ -82,13 +93,13 @@ nav a:last-child {
 }
 
 main {
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 45px;
 }
 
 .hero-banner {
   background: rgb(68, 88, 120);
-  background-image: url("../images/02-hero-bg.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+  background-image: url("../images/image08.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
@@ -103,6 +114,11 @@ main {
 
 .hero-banner div {
   flex: 0 0 90%;
+}
+
+.bottom-right {
+  text-align: right;
+  font-size: 40px;
 }
 
 .hero-banner h2 {
@@ -131,6 +147,7 @@ main {
   justify-content: space-between;
 }
 
+
 .page-section > h2 {
   flex: 0 0 20%;
   text-align: right;
@@ -140,18 +157,98 @@ main {
   line-height: 1.1;
 }
 
+
 .page-section > div {
   flex: 0 0 77%;
 }
 
 .page-section p {
   margin-bottom: 20px;
+  /*margin-left: 50px;*/
+  /*margin-top: 10px;*/
+}
+
+/*.paragraph p {
+margin-left: 20;
+}*/
+
+.page-section .container {
+  position: relative;
+  display: inline-block;
+}
+
+
+.text-block1 {
+  position: absolute;
+  bottom: 60px;
+  right: 782px;
+  color: var(--tertiary);
+  background-color: var(--secondary);
+  min-height: 5vh;
+  padding: 1% 2%;
+  display: flex;
+  z-index: 1;
+
+  /*justify-content: flex-end;*/
+  /*align-items: flex;*/
+  /*text-align: left; */
+}
+
+
+.text-block2 {
+  position: absolute;
+  bottom: 30px;
+  right: 370px;
+  color: var(--tertiary);
+  background-color: var(--secondary);
+  min-height: 5vh;
+  padding: 1% 2%;
+  display: flex;
+  z-index: 1;
+}
+
+.text-block3 {
+  position: absolute;
+  bottom: 30px;
+  right: 323px;
+  color: var(--tertiary);
+  background-color: var(--secondary);
+  min-height: 5vh;
+  padding: 1% 2%;
+  display: flex;
+}
+
+.text-block4 {
+  position: absolute;
+  bottom: 30px;
+  right: 328px;
+  color: var(--tertiary);
+  background-color: var(--secondary);
+  min-height: 5vh;
+  padding: 1% 2%;
+  display: flex;
+}
+
+.text-block5 {
+  position: absolute;
+  bottom: 30px;
+  right: 323px;
+  color: var(--tertiary);
+  background-color: var(--secondary);
+  min-height: 5vh;
+  padding: 1% 2%;
+  display: flex;
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.container a {
+  display: inline;
+  margin-inline: 5px;
 }
 
 .flex-item {
@@ -191,6 +288,15 @@ main {
   font-size: 1.6rem;
 }
 
+.address {
+  margin-top: 20px;
+}
+
+.address a {
+  display: inline;
+  margin-inline: 50px;
+}
+
 .contact address {
   display: flex;
   flex-wrap: wrap;
@@ -222,8 +328,27 @@ main {
 /* portfolio project images */
 /* TODO: Add portfolio project images here*/
 
+img {
+  background-image: url("../images/image03.jpg");
+  background-image: url("../images/image14.jpg");
+  background-image: url("../images/image15.jpg");
+  background-image: url("../images/image12.jpg");
+  background-image: url("../images/image17.jpg");
+  
+}
+
 /* media queries */
 
 /* TODO: add media query for a max-width of 980px */
+@media screen and (max-width: 980px){
+  header, main {
+  flex-direction: column;
+}
+}
 
 /* TODO: add media query for a max-width of 768px */
+@media screen and (max-width: 768px){
+  main, main {
+    flex-direction: column;
+  }
+}
